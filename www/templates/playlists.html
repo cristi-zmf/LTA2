@@ -1,9 +1,12 @@
 <ion-view view-title="London Sites">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="site in sites">
-        {{site.name}}
-      </ion-item>
-    </ion-list>
-  </ion-content>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-more" on-tap="openPopover($event)"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="site in sites">
+                {{site.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
 </ion-view>
