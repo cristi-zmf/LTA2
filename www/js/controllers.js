@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope, $http, $ionicPopover) {
+.controller('PlaylistsCtrl', function($scope, $http, $ionicPopover, $ionicModal) {
     $scope.sites = [];
     $http.get('/sites.json')
     .then(function (response) {
