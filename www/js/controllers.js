@@ -57,6 +57,20 @@ angular.module('starter.controllers', [])
     $scope.openPopover = function($event) {
         $scope.popover.show($event);
     };
+    
+    $ionicModal.fromTemplateUrl('templates/modal.html', {
+        scope: $scope
+    }).then(function(modal) {
+        $scope.modal = modal;
+    });
+    $scope.openModal = function() {
+        $scope.modal.show();
+    };
+    
+    $scope.closeModal = function() {
+        $scope.modal.hide();
+    };
+    
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
